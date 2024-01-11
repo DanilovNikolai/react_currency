@@ -1,0 +1,126 @@
+* {
+  font-family: "Inter", system-ui !important;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  background-color: #f9f2ed;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 250px auto;
+  max-width: 60%;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 700px) {
+    max-width: 80%;
+  }
+}
+
+.arrows {
+  margin: 0px 30px;
+
+  @media (max-width: 1300px) {
+    margin: 0px 20px;
+  }
+
+  @media (max-width: 1000px) {
+    margin: 20px 0px;
+  }
+
+  img {
+    @media (max-width: 900px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.block {
+  width: 100%;
+  input {
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 15px;
+    letter-spacing: 1.3px;
+    outline: none;
+    margin-top: 15px;
+    border-radius: 5px;
+    width: 100%;
+
+    @media (max-width: 900px) {
+      font-size: 24px;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.currencies {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  flex: 1;
+
+  li {
+    display: inline-flex;
+    padding: 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    justify-content: center;
+    flex: 1;
+
+    @media (max-width: 900px) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+    }
+
+    &:active {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    &.active {
+      background-color: #16b67f;
+      color: #fff;
+    }
+
+    &:last-of-type {
+      display: inline-flex;
+      align-items: center;
+      border-right: 0;
+
+      svg {
+        width: 20px;
+        height: 20px;
+
+        @media (max-width: 900px) {
+          width: 13px;
+          height: 13px;
+        }
+      }
+    }
+  }
+}
