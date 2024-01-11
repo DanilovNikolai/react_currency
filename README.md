@@ -5,7 +5,7 @@ This is a small web application with currency exchange rate conversion.
 # **App description:**
 
 The application consists of only one page.
-The data for conversion is taken from the website **_https://exchangeratesapi.io/_**.
+The data for conversion is taken from the website **_https://www.exchangerate-api.com/_**.
 Currencies are converted in both directions.
 The following currencies are used: Rub, Eur, Usd and Gbp.
 Under each block there is an input field in which you can enter any value.

@@ -14,12 +14,12 @@ function App() {
 
   useEffect(() => {
     fetch(
-      "http://api.exchangeratesapi.io/v1/latest?access_key=035c5f73845e6a22ea7415b83908a8a1"
+      "https://v6.exchangerate-api.com/v6/49e5b52229b0f1d1dc90df14/latest/USD"
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.rates);
-        ratesRef.current = data.rates;
+        console.log(data.conversion_rates);
+        ratesRef.current = data.conversion_rates;
         onChangeFromPrice(1);
       })
       .catch((err) => console.log(err));
@@ -46,8 +46,6 @@ function App() {
     setFromPrice(result.toFixed(2));
     setToPrice(value);
   }
-
-  console.log(ratesRef.current);
 
   return (
     <div className="App">
